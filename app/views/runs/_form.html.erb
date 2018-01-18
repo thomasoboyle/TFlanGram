@@ -1,0 +1,39 @@
+<%= form_for(@run, html: {multipart: true}) do |f| %>
+
+  <p>
+    <%= f.label :date %><br>
+    <%= f.date_select :date %>
+  </p>
+
+  <p>
+    <%= f.label :start_time %><br>
+    <%= f.time_field :start_time %>
+  </p>
+
+  <p>
+    <%= f.label :end_time %><br>
+    <%= f.time_field :end_time %>
+  </p>
+
+  <p>
+    <%= f.label :description %><br>
+    <%= f.text_area :description %>
+  </p>
+
+  <p>
+    <%= f.label :location %><br>
+    <%= f.text_field :location %>
+  </p>
+
+  <p>
+    <%= f.label :distance %><br>
+    <%= f.number_field :distance %>
+  </p>
+
+
+
+  <p>
+    <%= f.submit "Submit" %>
+  </p>
+
+<% end %>
