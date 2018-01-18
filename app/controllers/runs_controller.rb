@@ -22,9 +22,16 @@ class RunsController < ApplicationController
   end
 
   def edit
+    @run = Run.find(params[:id])
   end
 
   def update
+    @run = Run.find(params[:id])
+    if @run.update(run_params)
+      redirect_to @run
+    else
+      render 'new'
+    end
   end
 
   def destroy
