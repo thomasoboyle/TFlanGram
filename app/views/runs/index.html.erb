@@ -13,6 +13,7 @@
         <td><%= run.location %></td>
         <td><%= run.distance %>Miles</td>
         <td><%= link_to 'View', run_path(run) %></td>
+        <td><%= link_to 'Edit', edit_run_path(run) %></td>
       </tr>
     <% end %>
 

@@ -29,4 +29,9 @@
   <%= @run.distance %> Miles
 </p>
 
-<%= link_to 'View All Runs', runs_path %>
+<p>
+  <%= link_to 'Edit', edit_run_path(@run) %>
+</p>
+<p>
+  <%= link_to 'View All Runs', runs_path %>
+</p>
