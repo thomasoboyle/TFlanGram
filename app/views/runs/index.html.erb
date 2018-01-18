@@ -1,18 +1,23 @@
-<h1>Runs Index<h1>
+<h1>Runs Index</h1>
 
 <table>
     <tr>
       <th>Date</th>
       <th>Location</th>
+      <th>Distance</th>
     </tr>
 
     <% @runs.each do |run| %>
       <tr>
         <td><%= run.date %></td>
         <td><%= run.location %></td>
+        <td><%= run.distance %>Miles</td>
         <td><%= link_to 'View', run_path(run) %></td>
       </tr>
     <% end %>
 
   </table>
-</div><br>
+</div>
+</br>
+
+<%= link_to 'Record new run', new_run_path %>
