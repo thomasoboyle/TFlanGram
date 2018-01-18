@@ -32,6 +32,9 @@
 <p>
   <%= link_to 'Edit', edit_run_path(@run) %>
 </p>
+<%= link_to 'Delete', run_path(@run),
+        method: :delete,
+        data: { confirm: 'Are you sure?' } %><br>
 <p>
   <%= link_to 'View All Runs', runs_path %>
 </p>
