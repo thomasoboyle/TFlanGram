@@ -1,0 +1,40 @@
+<h1>Workout Show Page</h1>
+
+<p>
+  <strong>Date:</strong>
+  <%= @workout.date %>
+</p>
+
+<p>
+  <strong>Start Time:</strong>
+  <%= @workout.start_time %>
+</p>
+
+<p>
+  <strong>End Time:</strong>
+  <%= @workout.end_time %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @workout.description %>
+</p>
+
+<p>
+  <strong>Location:</strong>
+  <%= @workout.location %>
+</p>
+<p>
+  <strong>Distance:</strong>
+  <%= @workout.duration %> Minutes
+</p>
+
+<p>
+  <%= link_to 'Edit', edit_workout_path(@workout) %>
+</p>
+<%= link_to 'Delete', workout_path(@workout),
+        method: :delete,
+        data: { confirm: 'Are you sure?' } %><br>
+<p>
+  <%= link_to 'View All Workouts', workouts_path %>
+</p>

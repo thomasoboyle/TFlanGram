@@ -1,0 +1,24 @@
+<h1>Workouts Index</h1>
+
+<table>
+    <tr>
+      <th>Date</th>
+      <th>Location</th>
+      <th>Duration</th>
+    </tr>
+
+    <% @workouts.each do |workout| %>
+      <tr>
+        <td><%= workout.date %></td>
+        <td><%= workout.location %></td>
+        <td><%= workout.duration %>Minutes</td>
+        <td><%= link_to 'View', workout_path(workout) %></td>
+        <td><%= link_to 'Edit', edit_workout_path(workout) %></td>
+      </tr>
+    <% end %>
+
+  </table>
+</div>
+</br>
+
+<%= link_to 'Record new workout', new_workout_path %>
