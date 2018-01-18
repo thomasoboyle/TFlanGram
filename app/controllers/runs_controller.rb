@@ -35,6 +35,10 @@ class RunsController < ApplicationController
   end
 
   def destroy
+    @run = Run.find(params[:id])
+    @run.destroy
+
+    redirect_to runs_path
   end
 
   private
