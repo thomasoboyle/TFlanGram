@@ -14,24 +14,6 @@ ActiveRecord::Schema.define(version: 20180119024057) do
 
   create_table "activities", force: :cascade do |t|
     t.string "name"
-    t.integer "activity_id"
-    t.string "activity_name"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
-  create_table "runs", force: :cascade do |t|
-    t.date "date"
-    t.time "start_time"
-    t.time "end_time"
-    t.text "description"
-    t.text "location"
-    t.decimal "distance"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
-  create_table "workouts", force: :cascade do |t|
     t.date "date"
     t.time "start_time"
     t.time "end_time"

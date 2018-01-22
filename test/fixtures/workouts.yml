@@ -1,8 +1,9 @@
 # == Schema Information
 #
-# Table name: workouts
+# Table name: activities
 #
 #  id          :integer          not null, primary key
+#  name        :string
 #  date        :date
 #  start_time  :time
 #  end_time    :time

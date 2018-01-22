@@ -1,14 +1,15 @@
 # == Schema Information
 #
-# Table name: runs
+# Table name: activities
 #
 #  id          :integer          not null, primary key
+#  name        :string
 #  date        :date
 #  start_time  :time
 #  end_time    :time
 #  description :text
 #  location    :text
-#  distance    :decimal(, )
+#  duration    :decimal(, )
 #  created_at  :datetime         not null
 #  updated_at  :datetime         not null
 #
