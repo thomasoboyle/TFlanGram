@@ -10,28 +10,6 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180118051634) do
-
-  create_table "runs", force: :cascade do |t|
-    t.date "date"
-    t.time "start_time"
-    t.time "end_time"
-    t.text "description"
-    t.text "location"
-    t.decimal "distance"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
-  create_table "workouts", force: :cascade do |t|
-    t.date "date"
-    t.time "start_time"
-    t.time "end_time"
-    t.text "description"
-    t.text "location"
-    t.decimal "duration"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
+ActiveRecord::Schema.define(version: 0) do
 
 end

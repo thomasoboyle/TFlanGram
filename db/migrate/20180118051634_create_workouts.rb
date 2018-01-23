@@ -1,5 +1,5 @@
 class CreateWorkouts < ActiveRecord::Migration[5.1]
-  def change
+  def up    
     create_table :workouts do |t|
       t.date :date
       t.time :start_time
@@ -10,5 +10,9 @@ class CreateWorkouts < ActiveRecord::Migration[5.1]
 
       t.timestamps
     end
+  end
+
+  def down
+    drop_table :workouts
   end
 end
