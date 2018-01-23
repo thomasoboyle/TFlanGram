@@ -13,7 +13,10 @@
 #  updated_at  :datetime         not null
 #
 
+require 'test_helper'
 
-
-class Run < Activity
+class ActivityTest < ActiveSupport::TestCase
+  # test "the truth" do
+  #   assert true
+  # end
 end

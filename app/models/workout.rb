@@ -1,6 +1,6 @@
 # == Schema Information
 #
-# Table name: workouts
+# Table name: activities
 #
 #  id          :integer          not null, primary key
 #  date        :date
@@ -13,5 +13,7 @@
 #  updated_at  :datetime         not null
 #
 
-class Workout < ApplicationRecord
+
+
+class Workout < Activity
 end

@@ -15,5 +15,5 @@
 
 
 
-class Run < Activity
+class Activity < ApplicationRecord
 end
