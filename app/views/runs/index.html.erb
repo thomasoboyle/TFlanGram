@@ -1,6 +1,6 @@
-<div>
+<div class="row">
   <div class="col">
-    <h1>Runs Index</h1>
+    <h1><span class="badge secondary">Runs</span></h1>
 
     <table>
       <thead>
@@ -8,8 +8,6 @@
           <th>Date</th>
           <th>Location</th>
           <th>Distance</th>
-          <th></th>
-          <th></th>
         </tr>
       </thead>
 
@@ -27,6 +25,8 @@
 
     </table>
 
-    <%= link_to 'Record new run', new_run_path %>
+    <div class="col">
+      <%= link_to 'Record New Run', new_run_path, class: 'paper-btn' %>
+    </div>
   </div>
 </div>
