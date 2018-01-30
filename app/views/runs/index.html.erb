@@ -1,24 +1,32 @@
-<h1>Runs Index</h1>
+<div class="row">
+  <div class="col">
+    <h1><span class="badge secondary">Runs</span></h1>
 
-<table>
-    <tr>
-      <th>Date</th>
-      <th>Location</th>
-      <th>Distance</th>
-    </tr>
+    <table>
+      <thead>
+        <tr>
+          <th>Date</th>
+          <th>Location</th>
+          <th>Distance</th>
+        </tr>
+      </thead>
 
-    <% @runs.each do |run| %>
-      <tr>
-        <td><%= run.date %></td>
-        <td><%= run.location %></td>
-        <td><%= run.distance %>Miles</td>
-        <td><%= link_to 'View', run_path(run) %></td>
-        <td><%= link_to 'Edit', edit_run_path(run) %></td>
-      </tr>
-    <% end %>
+      <% @runs.each do |run| %>
+        <tbody>
+          <tr>
+            <td><%= run.date %></td>
+            <td><%= run.location %></td>
+            <td><%= run.distance %>Miles</td>
+            <td><%= link_to 'View', run_path(run) %></td>
+            <td><%= link_to 'Edit', edit_run_path(run) %></td>
+          </tr>
+        </tbody>
+      <% end %>
 
-  </table>
+    </table>
+
+    <div class="col">
+      <%= link_to 'Record New Run', new_run_path, class: 'paper-btn' %>
+    </div>
+  </div>
 </div>
-</br>
-
-<%= link_to 'Record new run', new_run_path %>
