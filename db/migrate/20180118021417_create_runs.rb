@@ -1,5 +1,5 @@
 class CreateRuns < ActiveRecord::Migration[5.1]
-  def change
+  def up 
     create_table :runs do |t|
       t.date :date
       t.time :start_time
@@ -10,5 +10,8 @@ class CreateRuns < ActiveRecord::Migration[5.1]
 
       t.timestamps
     end
+  end
+  def down
+    drop_table :runs
   end
 end

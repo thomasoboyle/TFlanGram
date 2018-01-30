@@ -1,6 +1,6 @@
 # == Schema Information
 #
-# Table name: runs
+# Table name: activities
 #
 #  id          :integer          not null, primary key
 #  date        :date
@@ -8,10 +8,11 @@
 #  end_time    :time
 #  description :text
 #  location    :text
-#  distance    :decimal(, )
+#  duration    :decimal(, )
 #  created_at  :datetime         not null
 #  updated_at  :datetime         not null
+#  distance    :decimal(, )
 #
 
-class Run < ApplicationRecord
+class Run < Activity
 end

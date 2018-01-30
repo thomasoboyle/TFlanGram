@@ -1,6 +1,6 @@
 # == Schema Information
 #
-# Table name: workouts
+# Table name: activities
 #
 #  id          :integer          not null, primary key
 #  date        :date
@@ -11,6 +11,7 @@
 #  duration    :decimal(, )
 #  created_at  :datetime         not null
 #  updated_at  :datetime         not null
+#  distance    :decimal(, )
 #
 
 require 'test_helper'
