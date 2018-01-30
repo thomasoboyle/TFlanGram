@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180123053731) do
+ActiveRecord::Schema.define(version: 20180130052220) do
 
   create_table "activities", force: :cascade do |t|
     t.date "date"
@@ -21,6 +21,7 @@ ActiveRecord::Schema.define(version: 20180123053731) do
     t.decimal "duration"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.decimal "distance"
   end
 
 end
