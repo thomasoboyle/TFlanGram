@@ -11,9 +11,8 @@
 #  duration    :decimal(, )
 #  created_at  :datetime         not null
 #  updated_at  :datetime         not null
+#  distance    :decimal(, )
 #
-
-
 
 class Workout < Activity
 end
