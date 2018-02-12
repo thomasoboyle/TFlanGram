@@ -1,6 +1,6 @@
 <div class='row'>
   <div class="col">
-    <h1><span class="badge success">Workout Details</span></h1>
+    <h3><span>Workout Details</span></h3>
     <p>
       <strong>Date:</strong>
       <%= @workout.date %>
@@ -32,12 +32,12 @@
 
     <p>
       <%= link_to 'Edit', edit_workout_path(@workout), class: 'paper-btn' %>
-    </p></br>
+    </p>
     <p>
     <%= link_to 'Delete', workout_path(@workout),
             method: :delete,
             data: { confirm: 'Are you sure?' }, class: 'paper-btn' %>
-  </p></br>
+  </p>
     <p>
       <%= link_to 'View All Workouts', workouts_path, class: 'paper-btn' %>
     </p>
