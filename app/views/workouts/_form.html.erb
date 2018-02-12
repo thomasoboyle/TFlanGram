@@ -1,37 +1,54 @@
 <%= form_for(@workout, html: {multipart: true}) do |f| %>
 
-  <p>
-    <%= f.label :date %><br>
-    <%= f.date_select :date %>
-  </p>
+  <div class="row">
+    <form class="col s12">
+      <div class="row">
+  
+        <div class="datepicker">
+          <%= f.label :date %><br>
+          <%= f.date_select :date %>
+        </div>
 
-  <p>
-    <%= f.label :start_time %><br>
-    <%= f.time_field :start_time %>
-  </p>
+        <div class="input-field col s6">
+          <%= f.label :start_time %><br>
+          <%= f.time_field :start_time %>
+        </div>
 
-  <p>
-    <%= f.label :end_time %><br>
-    <%= f.time_field :end_time %>
-  </p>
+        <div class="input-field col s6">
+          <%= f.label :end_time %><br>
+          <%= f.time_field :end_time %>
+        </div>
 
-  <p>
-    <%= f.label :description %><br>
-    <%= f.text_area :description %>
-  </p>
+        <div class="input-field col s6">
+          <%= f.label :location %><br>
+          <%= f.text_field :location %>
+        </div>
 
-  <p>
-    <%= f.label :location %><br>
-    <%= f.text_field :location %>
-  </p>
+        <div class="input-field col s6">
+          <%= f.label :distance %><br>
+          <%= f.number_field :distance %>
+        </div>
 
-  <p>
-    <%= f.label :duration %><br>
-    <%= f.number_field :duration %>
-  </p>
+        <div class="input-field col s12">
+          <%= f.label :description %><br>
+          <%= f.text_area :description %>
+        </div>
 
-  <p>
-    <%= f.submit "Submit" %>
-  </p>
+        <p>
+          <%= f.submit "Submit" %>
+        </p>
+
+        <p>
+          <%= f.label :duration %><br>
+          <%= f.number_field :duration %>
+        </p>
+
+        <p>
+          <%= f.submit "Submit" %>
+        </p>
+
+        </div>
+    </form>
+  </div>
 
 <% end %>
