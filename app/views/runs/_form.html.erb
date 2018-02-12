@@ -1,39 +1,68 @@
 <%= form_for(@run, html: {multipart: true}) do |f| %>
 
-  <p>
-    <%= f.label :date %><br>
-    <%= f.date_select :date %>
-  </p>
+  <div class="row">
+    <form class="col s12">
+      <div class="row">
 
-  <p>
-    <%= f.label :start_time %><br>
-    <%= f.time_field :start_time %>
-  </p>
+        <div class="datepicker">
+          <%= f.label :date %><br>
+          <%= f.date_select :date %>
+        </div>
 
-  <p>
-    <%= f.label :end_time %><br>
-    <%= f.time_field :end_time %>
-  </p>
+        <div class="input-field col s6">
+          <%= f.label :start_time %><br>
+          <%= f.time_field :start_time %>
+        </div>
 
-  <p>
-    <%= f.label :description %><br>
-    <%= f.text_area :description %>
-  </p>
+      <div class="input-field col s6">
+        <%= f.label :end_time %><br>
+        <%= f.time_field :end_time %>
+      </div>
 
-  <p>
-    <%= f.label :location %><br>
-    <%= f.text_field :location %>
-  </p>
+      <div class="input-field col s6">
+        <%= f.label :location %><br>
+        <%= f.text_field :location %>
+      </div>
+      <div class="input-field col s6">
+        <%= f.label :distance %><br>
+        <%= f.number_field :distance %>
+      </div>
+      <p>
+        <%= f.label :description %><br>
+        <%= f.text_area :description %>
+      </p>
 
-  <p>
-    <%= f.label :distance %><br>
-    <%= f.number_field :distance %>
-  </p>
+      <p>
+        <%= f.submit "Submit" %>
+      </p>
 
+      <% end %>
 
+      </div>
+    </form>
+  </div>
 
-  <p>
-    <%= f.submit "Submit" %>
-  </p>
+  
+    <div class="row">
+      <form class="col s12">
+        <div class="row">
+          <div class="input-field col s6">
+            <input id="input_text" type="text" data-length="10">
+            <label for="input_text">Input text</label>
+          </div>
+        </div>
+        <div class="row">
+          <div class="input-field col s12">
+            <textarea id="textarea1" class="materialize-textarea" data-length="120"></textarea>
+            <label for="textarea1">Textarea</label>
+          </div>
+        </div>
+      </form>
+    </div>
 
-<% end %>
+    <script>
+        $(document).ready(function() {
+    $('input#input_text, textarea#textarea1').characterCounter();
+  });
+
+    </script>
