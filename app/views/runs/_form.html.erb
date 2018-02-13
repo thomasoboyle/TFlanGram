@@ -4,37 +4,38 @@
     <form class="col s12">
       <div class="row">
 
-        <div class="datepicker">
+        <input type="text" class="datepicker">
           <%= f.label :date %><br>
           <%= f.date_select :date %>
-        </div>
 
         <div class="input-field col s6">
           <%= f.label :start_time %><br>
           <%= f.time_field :start_time %>
         </div>
 
-      <div class="input-field col s6">
-        <%= f.label :end_time %><br>
-        <%= f.time_field :end_time %>
-      </div>
+        <div class="input-field col s6">
+          <%= f.label :end_time %><br>
+          <%= f.time_field :end_time %>
+        </div>
 
-      <div class="input-field col s6">
-        <%= f.label :location %><br>
-        <%= f.text_field :location %>
-      </div>
-      <div class="input-field col s6">
-        <%= f.label :distance %><br>
-        <%= f.number_field :distance %>
-      </div>
-      <p>
-        <%= f.label :description %><br>
-        <%= f.text_area :description %>
-      </p>
+        <div class="input-field col s6">
+          <%= f.label :location %><br>
+          <%= f.text_field :location %>
+        </div>
 
-      <p>
-        <%= f.submit "Submit" %>
-      </p>
+        <div class="input-field col s6">
+          <%= f.label :distance %><br>
+          <%= f.number_field :distance %>
+        </div>
+
+        <div class="input-field col s12">
+          <%= f.label :description %>
+          <%= f.text_field :description %>
+        </p>
+
+        <p>
+          <%= f.submit "Submit" %>
+        </p>
 
 
       </div>
