@@ -2,6 +2,13 @@
   <div class="col">
     <h1><span>Activities</span></h1>
 
+    <div class="pagination col">
+      <div class="page_info">
+        <%= page_entries_info @activities %>
+      </div>
+      <%= will_paginate @activities, :container => false %>
+    </div>
+
     <table>
       <thead>
         <tr>
@@ -23,6 +30,7 @@
 
       </table>
     </br>
+
 
     <div class="col">
       <%= link_to 'Record new workout', new_workout_path, class: 'paper-btn' %>
