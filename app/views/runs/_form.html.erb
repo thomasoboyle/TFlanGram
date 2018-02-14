@@ -1,12 +1,12 @@
-<%= form_for(@run, html: {multipart: true}) do |f| %>
+<div class="row">
+  <form class="col s12">
+    <div class="row">
+      <%= form_for(@run, html: {multipart: true}) do |f| %>
 
-  <div class="row">
-    <form class="col s12">
-      <div class="row">
-
-        <input type="text" class="datepicker">
+        <div type="text" class="datepicker">
           <%= f.label :date %><br>
           <%= f.date_select :date %>
+        </div>
 
         <div class="input-field col s6">
           <%= f.label :start_time %><br>
@@ -33,13 +33,12 @@
           <%= f.text_field :description %>
         </p>
 
-        <p>
-          <%= f.submit "Submit" %>
-        </p>
+        <div class="col">
+          <%= f.submit "Submit", class: "btn waves-effect waves-light" %>
+        </div>
 
+      <% end %>
 
-      </div>
-    </form>
-  </div>
-
-<% end %>
+    </div>
+  </form>
+</div>
